@@ -45,5 +45,12 @@
 	</div>
 
 	<script src="js/bootstrap.bundle.min.js"></script>
+	<script>
+		function fun(a) {
+			var i = 10;
+			return i + a;
+			i++;             // Noncompliant; this is never executed
+		}
+	</script>
 </body>
 </html>
