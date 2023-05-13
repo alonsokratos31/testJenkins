@@ -1,8 +1,5 @@
-# Usa la imagen base de nginx
-FROM nginx
+# Usa la imagen base de Nginx
+FROM nginx:latest
 
-# Copia los archivos estáticos del sitio web en el directorio raíz del servidor web
-COPY ./site /usr/share/nginx/html
-
-# Exponer el puerto 80 para acceder al servidor web
-EXPOSE 80
+# Copia los archivos HTML al directorio de trabajo de Nginx
+COPY index.html /usr/share/nginx/html
